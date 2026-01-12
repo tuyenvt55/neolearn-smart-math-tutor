@@ -1,7 +1,9 @@
-import { BookOpen, TrendingUp, Award, Target, CheckCircle2, XCircle, Lightbulb } from "lucide-react";
+import { Link } from "react-router-dom";
+import { BookOpen, TrendingUp, Award, Target, CheckCircle2, XCircle, Lightbulb, QrCode } from "lucide-react";
 import DashboardLayout from "@/components/DashboardLayout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import { Button } from "@/components/ui/button";
 
 const stats = [
   {
@@ -72,9 +74,17 @@ const StudentDashboard = () => {
     <DashboardLayout role="student" userName="Alex Chen">
       <div className="p-8">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-display font-bold">Hey Alex! 👋</h1>
-          <p className="text-muted-foreground mt-1">Keep up the great work! You're improving every day.</p>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+          <div>
+            <h1 className="text-3xl font-display font-bold">Hey Alex! 👋</h1>
+            <p className="text-muted-foreground mt-1">Keep up the great work! You're improving every day.</p>
+          </div>
+          <Link to="/dashboard/student/scan">
+            <Button variant="accent" size="lg" className="gap-2 shadow-lg">
+              <QrCode className="w-5 h-5" />
+              Scan Paper Test
+            </Button>
+          </Link>
         </div>
 
         {/* Stats Grid */}

@@ -12,6 +12,7 @@ import {
   BookOpen,
   TrendingUp,
   Bell,
+  Camera,
 } from "lucide-react";
 import Logo from "./Logo";
 import { Button } from "./ui/button";
@@ -32,6 +33,7 @@ const navigationByRole = {
   ],
   student: [
     { name: "Dashboard", href: "/dashboard/student", icon: LayoutDashboard },
+    { name: "Scan Paper Test", href: "/dashboard/student/scan", icon: Camera },
     { name: "My Scores", href: "/dashboard/student/scores", icon: TrendingUp },
     { name: "Review Mistakes", href: "/dashboard/student/review", icon: BookOpen },
     { name: "Learning Path", href: "/dashboard/student/learning", icon: GraduationCap },
